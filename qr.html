@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0038)https://233boy.github.io/tools/qr.html -->
+<!-- saved from url=(0072)https://whinshine.github.io/qr.html#adfasdfasdfasdfasdfasdfasdfasdfas -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,8 +22,8 @@
 <body>
 
     <center>
-        <textarea id="text" type="text" placeholder="Please input the content" rows="23.333" cols="23.333" autofocus=""></textarea>
-        <p id="qrcode"></p>
+        <textarea id="text" type="text" placeholder="Please input content" rows="23.333" cols="23.333" autofocus=""></textarea>
+        <p id="qrcode"><canvas width="300" height="300"></canvas></p>
     </center>
     <script>
         text.value = window.location.hash.substring(1);
@@ -40,12 +40,12 @@
                     render: 'canvas',
                     size: 300,
                     ecLevel: 'Q',
-                    fill: '#233',
+                    fill: '#153',
                     background: null,
                     text: text,
-                    label: '233 Blog',
+                    label: 'vCross',
                     fontname: 'sans',
-                    fontcolor: '#233',
+                    fontcolor: '#153',
                     quiet: 0,
                     mode: 2
                 };
@@ -72,7 +72,7 @@
             })
         })
 
-        "serviceWorker"in navigator&&navigator.serviceWorker.register("/tools/sw.js");
+        
     </script>
 
 
