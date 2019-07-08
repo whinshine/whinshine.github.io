@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://whinshine.github.io/json.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Download client config files</title>
+    <style>
+        #qrcode,
+		#text {
+			max-width: 1024px;
+		}
+		#text {
+			width: 95%;
+		}
+        img {
+            border: 1px #ddd solid;
+        }
+	</style>
+<link id="avast_os_ext_custom_font" href="chrome-extension://mbckjcfnjmoiinpgddefodcighgikkgn/common/ui/fonts/fonts.css" rel="stylesheet" type="text/css"></head>
+
+<body>
+
+    <center>
+        <textarea id="text" type="text" placeholder="content" rows="23.33" cols="23.33"></textarea>
+        <p>
+            <a id="download" style="display:none"></a>
+        </p>
+        <p>
+            If the downloaded file name is not "vCross_v2ray.json", 
+        </p>
+        <p>
+            It's possible you use another downloading tools instead of the brower to download.
+        </p>
+        <p>
+            In this case, press ALT, and click refresh. Or press [CTRL + R] directly.
+        </p>
+    </center>
+    <script>
+        var v = window.location.hash.substring(1),
+            d = atob(v);
+        if (v && d) {
+            text.value = d;
+            download.href = 'data:text/json;charset=utf-8,' + d;
+            download.download = 'vCross_v2ray.json';
+            download.click();
+        }
+
+        "serviceWorker" in navigator && navigator.serviceWorker.register("sw.js");
+    </script>
+
+
+</body></html>
